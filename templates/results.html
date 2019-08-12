@@ -3,8 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="/styles/ghibli.css">
   </head>
   <body>
-    {{ response }}
+    {% for result in response %}
+     <div class="result">
+       {% for key, value in result.items() %}
+         <div>{{ key}} : {{ value }}</div>
+       {% endfor %}
+     </div>
+   {% endfor %}
   </body>
 </html>
